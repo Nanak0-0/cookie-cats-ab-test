@@ -232,9 +232,9 @@ code{background:#EEF4FC;color:var(--navy2);padding:1px 6px;border-radius:5px;fon
       <a href="#cover" class="">封面</a>
       <a href="#summary" class="">执行摘要</a>
       <a href="#design" class="">实验设计</a>
-      <a href="#metrics" class="on">指标口径</a>
-      <a href="#quality">数据质量 · SRM</a>
-      <a href="#descriptive">描述统计</a>
+      <a href="#metrics" class="">指标口径</a>
+      <a href="#quality" class="">数据质量 · SRM</a>
+      <a href="#descriptive" class="on">描述统计</a>
       <a href="#freq">频率派检验</a>
       <a href="#bayes">贝叶斯 A/B</a>
       <a href="#advanced">进阶分析</a>
@@ -267,7 +267,7 @@ code{background:#EEF4FC;color:var(--navy2);padding:1px 6px;border-radius:5px;fon
 <section id="summary">
   <div class="sec-head"><span class="sec-num">01</span><h2>执行摘要</h2></div>
   <p class="sec-sub">五条核心结论，覆盖效应方向、统计证据、机制解释与业务建议。</p>
-  <div class="grid g4" id="kpiRow"><div class="kpi"><div class="lab">7 日留存率 · gate_30（对照）</div><div class="val ">19.02%</div><div class="note">n = NaN · 95% CI [18.66%, 19.39%]</div></div><div class="kpi"><div class="lab">7 日留存率 · gate_40（实验）</div><div class="val ">18.20%</div><div class="note">n = 45,489 · 95% CI [17.85%, 18.56%]</div></div><div class="kpi"><div class="lab">绝对差 Δ（实验 − 对照）</div><div class="val down">-0.82pp</div><div class="note">相对变化 -4.31% · 95% CI [-1.33%, -0.31%]</div></div><div class="kpi"><div class="lab">两比例 z 检验</div><div class="val down">p = 0.0016</div><div class="note">z = -3.164 · Cohen’s h = -0.0211（小效应）</div></div></div>
+  <div class="grid g4" id="kpiRow"><div class="kpi"><div class="lab">7 日留存率 · gate_30（对照）</div><div class="val ">19.02%</div><div class="note">n = 44,700 · 95% CI [18.66%, 19.39%]</div></div><div class="kpi"><div class="lab">7 日留存率 · gate_40（实验）</div><div class="val ">18.20%</div><div class="note">n = 45,489 · 95% CI [17.85%, 18.56%]</div></div><div class="kpi"><div class="lab">绝对差 Δ（实验 − 对照）</div><div class="val down">-0.82pp</div><div class="note">相对变化 -4.31% · 95% CI [-1.33pp, -0.31pp]</div></div><div class="kpi"><div class="lab">两比例 z 检验</div><div class="val down">p = 0.0016</div><div class="note">z = -3.164 · Cohen’s h = -0.0211（小效应）</div></div></div>
   <div class="grid" style="margin-top:16px">
     <div class="card">
       <h3>核心结论（5 条）</h3>
@@ -326,7 +326,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
       <h3>统计功效与 MDE</h3>
       <div class="tbl-wrap" style="border:none"><table id="tblPower"><thead><tr><th>参数</th><th>数值</th></tr></thead><tbody><tr><td>基线 7 日留存率</td><td>18.61%</td></tr><tr><td>单组样本量</td><td>44,700</td></tr><tr><td>α / 目标功效</td><td>0.05 / 0.80</td></tr><tr><td>MDE（绝对）</td><td>0.729pp</td></tr><tr><td>MDE（相对）</td><td>3.92%</td></tr><tr><td>检测 1pp 绝对提升所需单组样本</td><td>23,774（本实验样本已远超）</td></tr><tr><td>观测功效（7 日留存）</td><td>88.6%</td></tr><tr><td>观测功效（1 日留存）</td><td>43.0%（功效不足，不显著 ≠ 无差异）</td></tr><tr><td>检测 2pp 绝对提升所需单组样本</td><td>5,944</td></tr></tbody></table></div>
       <div class="divider"></div>
-      <div class="chart sm" id="chPower" _echarts_instance_="ec_1790558909550" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="320" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart sm" id="chPower" _echarts_instance_="ec_1790577488186" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="320" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：MDE 按双尾 α = 0.05、Power = 0.80、单组样本量 44,700 计算；观测功效按实际效应量反推。数据来源：基于本实验真实样本量与真实基线留存率计算。</div>
     </div>
     <div class="card">
@@ -387,7 +387,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
       <div class="divider"></div>
       <div id="srmVerdict"><div class="note-card warn"><h4>SRM 结论：未触线，但需记录</h4><div class="small">卡方拟合优度检验 χ² = 6.902，p = 0.0086。按行业通用的 α = 0.001 红线判定，<b>未触发 SRM 告警</b>（该红线之所以严格，是因为大规模随机化下 p 值对极小的比例偏差也极为敏感）。但按常规 α = 0.05 口径，1.76% 的分组不平衡具备统计显著性。<br><br><b>对结论的影响评估：</b>分组不平衡主要影响标准误的精度，而<b>不引入效应估计的偏差</b>（随机化单元仍独立，且两组在可观测变量上无系统性差异的证据）。1.8% 的样本量差异会使标准误最多变化约 0.9%，远小于本实验的效应量级。因此该不平衡<b>不改变结论方向，也不影响 p = 0.00155 的判定</b>，但应作为实验平台数据质量巡检的一项记录。</div></div></div>
       <div class="divider"></div>
-      <div class="chart sm" id="chSRM" _echarts_instance_="ec_1790558909551" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="320" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart sm" id="chSRM" _echarts_instance_="ec_1790577488187" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="320" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：卡方拟合优度检验，观察频数 [44,700, 45,489] 对比期望频数 [45,094.5, 45,094.5]。行业通常以 p &lt; 0.001 判定 SRM 红线（大规模随机化下该检验对微小偏差过于敏感，故不宜用 0.05）。数据来源：真实实验分组计数。</div>
     </div>
   </div>
@@ -400,12 +400,12 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   <div class="grid g2">
     <div class="card">
       <h3>两组 1 日 / 7 日留存率对比（含 95% CI）</h3>
-      <div class="chart" id="chRetention" _echarts_instance_="ec_1790558909552" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chRetention" _echarts_instance_="ec_1790577488188" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：柱体为点估计，须线为 95% Wilson 置信区间（小样本或极端比例下优于 Wald 法），柱体顶端为留存率数据标签，柱底为样本量。<b>因样本量达 9 万，95% CI 极窄（约 ±0.4pp），须线在图上几乎不可见——这本身正是估计精度极高的体现</b>，故另设右侧「留存率差值」图放大展示区间宽度。数据来源：Kaggle Cookie Cats A/B Testing 原始明细，样本 90,189 人。</div>
     </div>
     <div class="card">
       <h3>留存率差值与 95% 置信区间</h3>
-      <div class="chart" id="chCI" _echarts_instance_="ec_1790558909553" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chCI" _echarts_instance_="ec_1790577488189" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：横轴为率差 Δ = p₄₀ - p₃₀（百分点），圆点为点估计，横线为 95% 置信区间，灰色虚线为 Δ = 0。7 日留存率的区间整体位于 0 左侧（不含 0，显著负向）；1 日留存率的区间跨越 0（不显著）。右侧标注各组留存率与 p 值。数据来源：同上。</div>
     </div>
   </div>
@@ -417,12 +417,12 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   <div class="grid g2" style="margin-top:16px">
     <div class="card">
       <h3>两组游戏回合数分布箱线图</h3>
-      <div class="chart lg" id="chBox" _echarts_instance_="ec_1790558909554" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 520px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="520" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart lg" id="chBox" _echarts_instance_="ec_1790577488190" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 520px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="330" height="520" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：纵轴为对数刻度 log₁₀(x+1)，箱体为 Q1–Q3，中线为中位数，须线为 P1–P99，菱形为均值。极端值（gate_30 最大 49,854 回合）未画入须线以避免压缩箱体，已在图中单独标注。数据来源：同上。</div>
     </div>
     <div class="card">
       <h3>游戏回合数分布直方图（对数分箱）</h3>
-      <div class="chart lg" id="chHist" _echarts_instance_="ec_1790558909555" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 520px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="520" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart lg" id="chHist" _echarts_instance_="ec_1790577488191" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 520px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="330" height="520" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; background-color: rgba(255, 255, 255, 0.98); border-width: 1px; color: rgb(31, 41, 55); font: 12.5px / 19px &quot;Microsoft YaHei&quot;; top: 0px; left: 0px; transform: translate3d(85px, 116px, 0px); border-color: rgb(216, 228, 242); box-shadow: rgba(11, 61, 145, 0.16) 0px 8px 26px; border-radius: 10px; padding: 10px 13px; pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:12.5px;color:#1F2937;font-weight:400;line-height:1;">1</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#0B3D91;"></span><span style="font-size:12.5px;color:#1F2937;font-weight:400;margin-left:2px">gate_30（对照）</span><span style="float:right;margin-left:20px;font-size:12.5px;color:#1F2937;font-weight:900">2,749</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#00A8E8;"></span><span style="font-size:12.5px;color:#1F2937;font-weight:400;margin-left:2px">gate_40（实验）</span><span style="float:right;margin-left:20px;font-size:12.5px;color:#1F2937;font-weight:900">2,789</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
       <div class="chart-src">注释：横轴按回合数区间分箱，纵轴为人数。约 4.4% 的用户安装后 0 回合（gate_30: 1,937 人 / gate_40: 2,057 人），两组分布形态高度重合。数据来源：同上。</div>
     </div>
   </div>
@@ -440,7 +440,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   <div class="grid g2" style="margin-top:16px">
     <div class="card">
       <h3>Bootstrap 差值分布（7 日留存率）</h3>
-      <div class="chart" id="chBoot" _echarts_instance_="ec_1790558909556" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chBoot" _echarts_instance_="ec_1790577488192" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：对两组各自的 0/1 留存结果做 20,000 次有放回重抽（Bernoulli 数据下等价于二项重抽），计算每次重抽的率差。深蓝为负向样本，浅蓝为正向样本。红色虚线为 Δ = 0，橙色竖线为观测差值 -0.82pp，青色竖线为 95% 百分位区间 [-1.32pp, -0.31pp]。<b>99.93% 的重抽样本落在 0 左侧。</b>数据来源：同上。</div>
     </div>
     <div class="card">
@@ -464,12 +464,12 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   <div class="grid g2" style="margin-top:16px">
     <div class="card">
       <h3>7 日留存率后验分布</h3>
-      <div class="chart" id="chBayesPost" _echarts_instance_="ec_1790558909557" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chBayesPost" _echarts_instance_="ec_1790577488193" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：先验为 Beta(1,1) 无信息均匀先验，后验为 Beta(1+成功数, 1+失败数)。gate_30 后验为 Beta(8503, 36199)，gate_40 后验为 Beta(8280, 37211)，后验均值差 -0.82pp，后验 95% 可信区间 [-1.33pp, -0.31pp]。两组后验分布几乎不重叠。数据来源：同上。</div>
     </div>
     <div class="card">
       <h3>差值后验分布 Δ = p₄₀ - p₃₀</h3>
-      <div class="chart" id="chBayesDelta" _echarts_instance_="ec_1790558909558" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chBayesDelta" _echarts_instance_="ec_1790577488194" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：通过 400,000 次后验抽样得到。几乎所有概率质量集中在 0 左侧：P(Δ &gt; 0) = 0.07%，P(Δ &lt; 0) = 99.93%。P(|Δ| &lt; 0.5pp) = 10.8%，说明「无实际差异」的假设同样难以成立。数据来源：同上。</div>
     </div>
   </div>
@@ -487,7 +487,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   <div class="grid g2">
     <div class="card">
       <h3>CUPED 方差缩减曲线<span class="tag sim" style="margin-left:6px">模拟</span></h3>
-      <div class="chart" id="chCuped" _echarts_instance_="ec_1790558909559" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+      <div class="chart" id="chCuped" _echarts_instance_="ec_1790577488195" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 330px; height: 420px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="330" height="420" style="position: absolute; left: 0px; top: 0px; width: 330px; height: 420px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
       <div class="chart-src">注释：<b>本数据集不含实验前协变量字段，无法在真实数据上落地 CUPED，故下图为以真实方差为基准的受控仿真。</b>曲线展示在给定预实验协变量与结果变量的相关系数 ρ 下，CUPED 可实现的方差缩减比例（理论上等于 ρ²）与等效样本量倍数 1/(1-ρ²)。数据来源：仿真计算，参数基于本实验真实基线率 18.61% 与样本量 90,189。</div>
     </div>
     <div class="card">
@@ -502,7 +502,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   </div>
   <div class="card" style="margin-top:16px">
     <h3>异质性分析 · 森林图（7 日留存率）</h3>
-    <div class="chart lg" id="chForest" _echarts_instance_="ec_1790558909560" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 722px; height: 520px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="520" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+    <div class="chart lg" id="chForest" _echarts_instance_="ec_1790577488196" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 722px; height: 520px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="520" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 520px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
     <div class="chart-src">注释：圆点为各子群体的率差点估计（Δpp = gate_40 - gate_30），横线为 95% 置信区间，方块大小为该群体样本量，颜色区分 BH-FDR 校正后是否显著（深蓝 = 显著，青色 = 不显著）。虚线为整体效应 -0.82pp。<b>「设备（模拟）」与「获客渠道（模拟）」两个维度为受控模拟生成（原始数据无该两列），仅用于演示分层分析链路，不作为决策依据。</b>数据来源：真实明细数据 + 受控模拟分层标签。</div>
   </div>
   <div class="card" style="margin-top:16px">
@@ -512,7 +512,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
   </div>
   <div class="card" style="margin-top:16px">
     <h3>多重检验校正对照（7 日留存率）</h3>
-    <div class="chart" id="chMulti" style="height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1790558909561"><div style="position: relative; width: 722px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="460" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+    <div class="chart" id="chMulti" style="height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1790577488197"><div style="position: relative; width: 722px; height: 460px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="460" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 460px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
     <div class="chart-src">注释：横轴为子群体，纵轴为 p 值（对数刻度），红线为 α = 0.05。原始 p 值下有 7 个子群体显著；经 BH-FDR 校正后仍有 7 个显著；经更保守的 Bonferroni 校正后仅 3 个显著（高活跃 Q4、中高活跃 Q3、首日有游玩）。<b>但三者的效应方向全部为负</b>，不存在「某些人群受益」的分裂结论。数据来源：同上。</div>
   </div>
   <div class="card" style="margin-top:16px">
@@ -580,7 +580,7 @@ if CI₇₅ ⊆ (0, +∞) 且 p &lt; 0.05  →  上线（正向显著）
       模型口径：Δ(7 日留存率) = -0.82pp（点估计）。每期新增 N 名玩家，则每批新增玩家中减少的 7 日留存用户为 N × 0.82%。年化机会成本 = 减少的留存用户 × 单用户 LTV × 12。<b>LTV 与新增量为假设参数（非本数据集提供），请按实际业务口径替换。</b>
     </div>
     <div class="tbl-wrap"><table id="tblROI"><thead><tr><th>新增玩家规模</th><th>每批减少的 D7 留存用户</th><th>95% CI（人数）</th><th>年化损失 LTV ¥5</th><th>年化损失 LTV ¥10</th><th>年化损失 LTV ¥20</th><th>年化损失 LTV ¥40</th></tr></thead><tbody><tr><td>300,000 / 期</td><td>2,460</td><td>936 – 3,984</td><td>¥14.8万</td><td>¥29.5万</td><td>¥59.0万</td><td>¥118.1万</td></tr><tr><td>1,000,000 / 期</td><td>8,201</td><td>3,121 – 13,282</td><td>¥49.2万</td><td>¥98.4万</td><td>¥196.8万</td><td>¥393.7万</td></tr><tr><td>3,000,000 / 期</td><td>24,604</td><td>9,363 – 39,845</td><td>¥147.6万</td><td>¥295.2万</td><td>¥590.5万</td><td>¥1181.0万</td></tr></tbody></table></div>
-    <div class="chart" id="chROI" style="height: 390px; margin-top: 16px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1790558909562"><div style="position: relative; width: 722px; height: 390px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="390" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 390px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+    <div class="chart" id="chROI" style="height: 390px; margin-top: 16px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;" _echarts_instance_="ec_1790577488198"><div style="position: relative; width: 722px; height: 390px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="722" height="390" style="position: absolute; left: 0px; top: 0px; width: 722px; height: 390px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
     <div class="chart-src">注释：柱状图为不同 LTV 假设下的年化留存收入损失（月新增 30 万口径），误差须为基于 7 日留存率 95% CI 的区间估计。数据来源：效应量来自真实实验数据，LTV 与新增量为假设参数（已标注）。</div>
   </div>
   <div class="card" style="margin-top:16px">
@@ -3718,9 +3718,24 @@ var C = {navy:'#0B3D91', navy2:'#1A4F8B', blue:'#2F80ED', cyan:'#00A8E8',
 var ZH = 'zh-CN';
 
 /* ---------- 工具 ---------- */
-function pct(x,d){ return (Number(x)*100).toFixed(d===undefined?2:d)+'%'; }
-function pp(x,d){ d=d===undefined?2:d; return (Number(x)*100>=0?'+':'')+(Number(x)*100).toFixed(d)+'pp'; }
+/* 格式化防呆：任何非有限数都不允许渲染成 "NaN"。命中时登记到 window.__FMT_ERRORS__
+   （离线验证脚本会读取该数组，非空即判失败），并以 "—" 占位。 */
+var FMT_ERR = [];
+try { window.__FMT_ERRORS__ = FMT_ERR; } catch(e){}
+function okNum(x){
+  if (typeof x === 'number') return isFinite(x);
+  if (typeof x === 'string') return x.trim() !== '' && isFinite(Number(x));
+  return false;
+}
+function guard(name, x){
+  if (okNum(x)) return true;
+  FMT_ERR.push(name + '(' + (x === undefined ? 'undefined' : String(x)) + ')');
+  return false;
+}
+function pct(x,d){ if(!guard('pct',x)) return '\u2014'; return ((Number(x))*100).toFixed(d===undefined?2:d)+'%'; }
+function pp(x,d){ if(!guard('pp',x)) return '\u2014'; d=d===undefined?2:d; return (Number(x)*100>=0?'+':'')+(Number(x)*100).toFixed(d)+'pp'; }
 function num(x,d){
+  if(!guard('num',x)) return '\u2014';
   d=(d===undefined?0:d);
   return Number(x).toLocaleString(ZH,{minimumFractionDigits:d,maximumFractionDigits:d});
 }
@@ -3729,14 +3744,21 @@ function pfmt(p){
   if(p<0.0001) return '<0.0001';
   return Number(p).toFixed(4);
 }
+/* 派生比值的百分数（如相对增长），base 为 0 或取值缺失时不输出 NaN */
+function pctChange(cur, base){
+  if(!guard('pctChange', cur) || !guard('pctChange', base)) return '\u2014';
+  if(Number(base) === 0) return '\u2014';
+  return ((Number(cur)/Number(base)-1)*100).toFixed(2)+'%';
+}
 function moneyW(x){
+  if(!guard('moneyW',x)) return '\u2014';
   var a=Math.abs(x);
   if(a>=1e8) return '\u00A5'+(x/1e8).toFixed(2)+'\u4EBF';
   if(a>=1e4) return '\u00A5'+(x/1e4).toFixed(1)+'\u4E07';
   return '\u00A5'+Math.round(x).toLocaleString(ZH);
 }
 function sgn(x){ return x>0?'up':(x<0?'down':''); }
-function sfx(x,d){ d=d===undefined?3:d; return (x>=0?'+':'')+Number(x).toFixed(d); }
+function sfx(x,d){ if(!guard('sfx',x)) return '\u2014'; d=d===undefined?3:d; return (x>=0?'+':'')+Number(x).toFixed(d); }
 
 var charts = [];
 function mkChart(id, opt){
@@ -3812,13 +3834,15 @@ function nearIdx(arr, target){
 /* ================= 01 执行摘要 KPI ================= */
 function buildKpi(){
   var a = D.desc.gate_30.retention_7, b = D.desc.gate_40.retention_7, f7 = D.freq.retention_7;
+  /* n 是「组级」分母，位于 desc.gate_XX.n；指标级对象 retention_* 只有 {k, rate, ci_low, ci_high, se}，没有 n */
+  var n30 = D.desc.gate_30.n, n40 = D.desc.gate_40.n;
   var items = [
     {lab:'7 日留存率 \u00B7 gate_30（对照）', val:pct(a.rate),
-     note:'n = '+num(a.n)+' \u00B7 95% CI ['+pct(a.ci_low)+', '+pct(a.ci_high)+']'},
+     note:'n = '+num(n30)+' \u00B7 95% CI ['+pct(a.ci_low)+', '+pct(a.ci_high)+']'},
     {lab:'7 日留存率 \u00B7 gate_40（实验）', val:pct(b.rate),
-     note:'n = '+num(D.desc.gate_40.n)+' \u00B7 95% CI ['+pct(b.ci_low)+', '+pct(b.ci_high)+']'},
+     note:'n = '+num(n40)+' \u00B7 95% CI ['+pct(b.ci_low)+', '+pct(b.ci_high)+']'},
     {lab:'绝对差 \u0394（实验 \u2212 对照）', val:pp(f7.diff), cls:sgn(f7.diff),
-     note:'相对变化 '+pct(f7.rel_lift)+' \u00B7 95% CI ['+pct(f7.ci_low)+', '+pct(f7.ci_high)+']'},
+     note:'相对变化 '+pct(f7.rel_lift)+' \u00B7 95% CI ['+pp(f7.ci_low)+', '+pp(f7.ci_high)+']'},
     {lab:'两比例 z 检验', val:'p = '+pfmt(f7.p), cls:'down',
      note:'z = '+Number(f7.z).toFixed(3)+' \u00B7 Cohen\u2019s h = '+Number(f7.cohens_h).toFixed(4)+'（小效应）'}
   ];
@@ -3941,7 +3965,7 @@ function buildQuality(){
     ['总人数', num(s.N)],
     ['观测比例（实验 : 对照）', Number(s.ratio40_over_30).toFixed(4)+' : 1'],
     ['理论比例','1.0000 : 1（50 : 50 随机）'],
-    ['偏离幅度', ((Number(s.ratio40_over_30)-1)*100).toFixed(2)+'%（实验组多 '+num(s.n40-Math.round(s.N/2))+' 人）'],
+    ['偏离幅度', pctChange(s.ratio40_over_30, 1)+'（实验组多 '+num(s.n40-Math.round(s.N/2))+' 人）'],
     ['卡方统计量 \u03C7\u00B2', Number(s.chi2).toFixed(4)],
     ['p 值', pfmt(s.p)],
     ['判定（\u03B1 = 0.001 行业红线）', s.srm_alert ? '\u26A0 触发 SRM 告警' : '\u2705 未触发 SRM 告警'],
@@ -4080,7 +4104,7 @@ function buildDescriptive(){
   }
   var f1 = D.freq.retention_1, f7 = D.freq.retention_7;
   tbl('tblDesc', ['指标','gate_30（对照）','gate_40（实验）','绝对差','相对差','95% CI（差值）','显著性'], [
-    ['样本量 n', num(a.n), num(b.n), num(b.n-a.n), ((b.n/a.n-1)*100).toFixed(2)+'%','\u2014','\u2014'],
+    ['样本量 n', num(a.n), num(b.n), num(b.n-a.n), pctChange(b.n, a.n),'\u2014','\u2014'],
     ['1 日留存率', ciCell(a,'retention_1'), ciCell(b,'retention_1'),
       pp(f1.diff), pct(f1.rel_lift), '['+pp(f1.ci_low,2)+', '+pp(f1.ci_high,2)+']',
       '<span class="tag ns">不显著 p='+pfmt(f1.p)+'</span>'],
@@ -4107,7 +4131,7 @@ function buildDescriptive(){
     ['最大值（极端值）', num(a.sum_gamerounds.max), num(b.sum_gamerounds.max),'\u2014','\u2014','\u2014','\u2014'],
     ['0 回合用户数', num(D.zero_rounds.gate_30), num(D.zero_rounds.gate_40),
       sfx(D.zero_rounds.gate_40-D.zero_rounds.gate_30,0),
-      ((D.zero_rounds.gate_40/D.zero_rounds.gate_30-1)*100).toFixed(2)+'%','\u2014','\u2014']
+      pctChange(D.zero_rounds.gate_40, D.zero_rounds.gate_30),'\u2014','\u2014']
   ]);
 
   /* 箱线图 */
@@ -4799,7 +4823,6 @@ window.addEventListener('resize', function(){
 })();
 
 </script>
-
 
 
 </body></html>
